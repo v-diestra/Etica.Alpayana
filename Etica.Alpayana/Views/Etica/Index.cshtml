@@ -1,0 +1,166 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<div class="container">
+    <form id="Form_denuncias">
+        <section class="section" id="1_section">
+            <h5>BIENVENID&#64; AL CANAL DE DENUNCIAS DE ALPAYANA</h5>
+            <p class="pt-3">
+                En Alpayana nos comprometemos a mantener condiciones de respeto entre los trabajadores, promover la equidad de género y establecer <a href="~/archivos/Política para prevenir y sancionar el HS.pdf" target="_blank"><strong>medidas de prevención y sanción en contra del hostigamiento sexual.</strong></a> Recuerda que esta es una <strong>plataforma segura</strong> y este caso se trabajará de la mano con el comité de hostigamiento sexual de manera <strong>confidencial.</strong> ¡Cuenta con nosotros!
+            </p>
+            <h6>
+                DATOS DEL REPORTE
+            </h6>
+            <div style="width: 500px; margin: 0 auto;">
+                <div class="form-group">
+                    <select class="form-control form-control-sm" id="TipoReporte" name="TipoReporte">
+                    </select>
+                </div>
+            </div>
+            <p class="pb-3"><strong>Las siguientes preguntas son 100% confidenciales y tu identidad será protegida.</strong></p>
+            <div class="question_title">
+                <h4>1</h4><p><strong>Datos del denunciado (OBLIGATORIO):</strong></p>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="nombres_denunciado">Nombres y apellidos</label>
+                        <input type="text" class="form-control form-control-sm" id="DenunciadoNombre" name="DenunciadoNombre" required oninvalid="this.setCustomValidity('Por favor ingrese sus datos.')" oninput="this.setCustomValidity('')">
+                    </div>
+                    <div class="form-group">
+                        <label for="puesto_denunciado">Puesto o cargo (opcional)</label>
+                        <input type="text" class="form-control form-control-sm" id="DenunciadoPuesto" name="DenunciadoPuesto">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="txt_headquarters">Sede</label>
+                        <select class="form-control form-control-sm" id="DenunciadoSede" name="DenunciadoSede">
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="2_section">
+            <div class="question_title">
+                <h4>2</h4><p><strong>Datos del denunciante (OBLIGATORIO):</strong></p>
+            </div>
+            <p>Soy:</p>
+            <div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="DenuncianteTipo" value="1" required oninvalid="this.setCustomValidity('Por favor seleccione una opción.')" oninput="this.setCustomValidity('')">
+                    <label class="form-check-label">Testigo</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="DenuncianteTipo" value="2">
+                    <label class="form-check-label">Víctima</label>
+                </div>
+            </div>
+            <div class="contentTestigoVictima">
+                <p class="pt-3">
+                    Ambas formas de denuncia serán tomadas con la misma importancia.
+                    Recuerda que pese a que el registro sea con nombre este no se hará público.
+                </p>
+                <div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="DenuncianteIdentidad" value="1" required oninvalid="this.setCustomValidity('Por favor seleccione una opción.')" oninput="this.setCustomValidity('')">
+                        <label class="form-check-label">Anónimo</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="DenuncianteIdentidad" value="2">
+                        <label class="form-check-label">Nombre</label>
+                    </div>
+                </div>
+            </div>
+            <div class="contentTestigoNombre">
+                <p class="pt-3"><strong>Datos del testigo</strong></p>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="txt_fullname">Nombres y apellidos</label>
+                            <input type="text" class="form-control form-control-sm" name="DenuncianteNombre">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="txt_headquarters">Sede</label>
+                            <select class="form-control form-control-sm" name="DenuncianteSede" id="DenuncianteSede">
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contentTestigoVictimaDatos">
+                <p class="pt-3">
+                    A fin de brindar información adicional a la registrada, sugerimos crear un correo electrónico anónimo para mantener contacto. La información brindada y tus datos serán protegidos en todo momento. (OPCIONAL)
+                </p>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="txt_fullname">Correo electrónico</label>
+                            <input type="email" class="form-control form-control-sm" id="DenuncianteCorreo" name="DenuncianteCorreo">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="txt_fullname">Teléfono</label>
+                            <input type="text" class="form-control form-control-sm number" id="DenuncianteTelefono" name="DenuncianteTelefono">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contentVictimaDatos pt-3">
+                <p class="contentTestigoNombreTitulo"><strong>Datos de la víctima (OBLIGATORIO)</strong></p>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="txt_fullname">Nombre y apellido</label>
+                            <input type="text" class="form-control form-control-sm" id="VictimaNombre" name="VictimaNombre" required oninvalid="this.setCustomValidity('Por favor ingrese los datos de la víctima.')" oninput="this.setCustomValidity('')">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="txt_headquarters">Sede</label>
+                            <select class="form-control form-control-sm" name="VictimaSede" id="VictimaSede">
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="section pt-3" id="three_section">
+            <div class="question_title">
+                <h4>3</h4><p><strong>Detalles de la denuncia (OBLIGATORIO):</strong></p>
+            </div>
+            <div class="form-group">
+                <label for="txt_fullname">Lugar de incidente:</label>
+                <input type="text" class="form-control form-control-sm" name="LugarIncidente" required oninvalid="this.setCustomValidity('Por favor detalle el lugar de incidencia.')" oninput="this.setCustomValidity('')">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">
+                    Por favor, detalla el acto del que fuiste víctima o testigo. Esta información nos ayudará con la investigación:
+                    ¿En qué fecha exacta o periodo sucedió?, ¿cuándo sucedió? ¿qué sucedió?:
+                </label>
+                <textarea class="form-control" name="Detalle" rows="3" required oninvalid="this.setCustomValidity('Por favor detalle el acto de la incidencia.')" oninput="this.setCustomValidity('')"></textarea>
+            </div>
+            <p>Si cuentas con algún archivo que respalde tu denuncia puedes agregarlo. (OPCIONAL)</p>
+            <div id="file-uploader"></div>
+
+            <div style="text-align:center;">
+                Muchas gracias por registrar tu denuncia, recuerda que tienes nuestro total apoyo. Para conocer el proceso de denuncia <a href="#"><strong>haz clic aquí.</strong></a>
+            </div>
+            <br />
+            <br />
+            <div class="row">
+                <div class="col-sm-6"><label>Recuerda que este es un canal serio, evita registrar denuncias falsas.</label></div>
+                <div class="col-sm-6 text-right"><button type="submit" class="btn btn-sm">ENVIAR</button></div>
+            </div>
+            <br />
+        </section>
+    </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+

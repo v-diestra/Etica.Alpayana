@@ -1,0 +1,92 @@
+﻿select, input, textarea{
+    border-radius:0px !important;
+    border-color:var(--verdeoscuro-color) !important;
+}
+button{
+    background-color:var(--verdeoscuro-color) !important;
+    color:white !important;
+    border-radius:0px !important;
+}
+.question_title {
+    display: flex;
+    align-items: flex-start;
+}
+h4{
+    font-family:Supply;
+    margin-right:10px;
+    color:var(--verdeoscuro-color);
+}
+
+
+h5 {
+    font-family: Supply;
+    color: var(--verdeoscuro-color);
+}
+h6 {
+    font-family:Supply;
+    font-family: Mikro;
+    text-align: center;
+    color: var(--amarillo-color);
+}
+
+body{
+    font-family:Mikro;
+}
+a{
+    color:black;
+    text-decoration:none;
+}
+a:hover{
+    text-decoration:none;
+    color:black;
+}
+
+#img_right {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    width: 50px;
+    transition: left 0.5s ease-in-out;
+    cursor: pointer;
+    right: 0;
+    transition: transform 0.08s ease-in-out;
+}
+#img_right:active {
+    transform: translateY(-10px);
+}
+#img_right {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    width: 50px;
+    transition: left 0.5s ease-in-out;
+    cursor: pointer;
+    right: 0;
+    transition: transform 0.08s ease-in-out;
+}
+#img_left {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    width: 50px;
+    transition: left 0.5s ease-in-out;
+    cursor: pointer;
+    left: 0;
+    transition: transform 0.08s ease-in-out;
+}
+#img_right:active {
+    transform: translateY(-10px);
+}
+#img_left:active {
+    transform: translateY(-10px);
+}
+.form-control:focus {
+    box-shadow: 0 0 0 0.1rem rgba(0,80,80);
+}
+.contentTestigoVictima, .contentTestigoVictimaDatos, .contentTestigoNombre, .contentTestigoNombreTitulo, .contentTestigoNombreTituloStrong, .contentVictimaDatos {
+    display: none;
+}
+
+.dx-fileuploader-upload-button, .dx-icon {
+    font-size: 2em;
+}
